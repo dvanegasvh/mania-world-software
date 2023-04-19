@@ -1,3 +1,24 @@
 {
-  "extends": "next/core-web-vitals"
+    "extends": "next/core-web-vitals",
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": ["prefer-arrow", "@typescript-eslint"],
+    "rules": {
+        "prefer-arrow/prefer-arrow-functions": [
+            "error",
+            {
+                "disallowPrototype": true,
+                "singleReturnOnly": false,
+                "classPropertiesAllowed": false
+            }
+        ],
+        "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
+        "@typescript-eslint/explicit-function-return-type": "warn"
+    }
 }

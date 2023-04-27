@@ -6,24 +6,31 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        font-family: 'DM Sans', sans-serif !important;
-        font-feature-settings: 'kern' !important;
-        -webkit-font-smoothing: antialiased;
-        letter-spacing: -0.5px;
-    }
+	html {
+		font-family: 'Poppins', sans-serif !important;
+		font-feature-settings: 'kern' !important;
+		-webkit-font-smoothing: antialiased;
+		letter-spacing: -0.5px;
+		color: #0f1b61;
+	}
+}
+
+@layer utilities {
+	.section-container {
+		padding: 24px 20px;
+	}
 }
 
 input.defaultCheckbox::before {
-    color: white;
-    opacity: 0;
-    height: 16px;
-    width: 16px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0px);
+	color: white;
+	opacity: 0;
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0px);
 }
 
 input:checked.defaultCheckbox::before {
-    opacity: 1;
+	opacity: 1;
 }

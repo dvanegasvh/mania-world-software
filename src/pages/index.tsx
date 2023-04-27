@@ -1,15 +1,14 @@
 import React from 'react';
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import { TitlePage } from '@/components/title-page';
+import { getRouteTitle } from '@/utils/Routes';
+import { ROUTE_NAMES } from '@/models/Routes';
 
 export const Home: React.FC = () => {
-    return (
-        <div className="bg-blueSecondary">
-            <div>Hola como estas</div>
-        </div>
-    );
+	return (
+		<section>
+			<TitlePage title={getRouteTitle(ROUTE_NAMES.BALANCE)} />
+		</section>
+	);
 };
 
 export default Home;

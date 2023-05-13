@@ -243,6 +243,7 @@ module.exports = {
 				blueSecondary: '#4318FF',
 				brandLinear: '#868CFF',
 				primareRed: '#C1292E',
+				primaryGray: '#394C60',
 				gray: {
 					50: '#f8f9fa',
 					100: '#edf2f7',

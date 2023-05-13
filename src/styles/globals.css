@@ -17,20 +17,59 @@
 
 @layer utilities {
 	.section-container {
-		padding: 24px 20px;
+		@apply py-[25px] px-[20px];
 	}
 }
 
 input.defaultCheckbox::before {
-	color: white;
-	opacity: 0;
-	height: 16px;
-	width: 16px;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0px);
+	@apply text-white opacity-0 h-[16px] w-[16px] absolute left-1/2 -translate-x-1/2;
 }
 
 input:checked.defaultCheckbox::before {
 	opacity: 1;
+}
+
+.ant-menu {
+	border-inline-end: none !important;
+	@apply text-secondary font-poppins font-medium !bg-transparent text-[16px] !relative;
+}
+
+.ant-menu-item-selected {
+	@apply !text-primary font-semibold !bg-transparent;
+}
+
+.ant-menu-item-selected::before {
+	content: url('../assets//svgs/line.svg');
+	@apply absolute right-0 -mr-[33px] mt-[7px] ;
+}
+
+.ant-menu-item {
+	@apply !rounded-none !pl-[10px] !w-[98%]
+}
+.ant-menu-item:hover {
+	background-color: transparent !important;
+}
+
+.ant-menu-submenu {
+	@apply !rounded-[6px]
+}
+
+.ant-menu-submenu-open {
+	background-color: rgba(248, 250, 252, 0.6);
+	@apply !rounded-none
+}
+
+.ant-menu-submenu-title:hover {
+	@apply !text-secondary !bg-slate-50;
+}
+
+.ant-menu-submenu-title {
+	@apply !text-secondary hover:!bg-transparent !pl-[10px] !pr-[12px];
+}
+
+.ant-menu-sub {
+	.ant-menu-title-content {
+		margin-left: 29px;
+		@apply hover:!text-primary ml-[29px]
+	}
 }

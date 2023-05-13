@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import React from 'react';
+import { Links } from './components';
 
 export const Sidebar: React.FC = () => {
 	const open = true;
@@ -16,36 +16,7 @@ export const Sidebar: React.FC = () => {
 				<div className="text-center text-[12px]">software</div>
 			</div>
 			<div className="mb-7 h-px bg-gray-300 dark:bg-white/30" />
-			{/* Nav item */}
-			<ul className="mb-auto pt-1">
-				<Link href={'/'}>
-					<div className="relative mb-3 flex hover:cursor-pointer">
-						<li className="my-[3px] flex cursor-pointer items-center px-8">
-							<span
-								className={`${
-									// activeRoute(route.path) === true
-									'font-bold text-brand-500 dark:text-white'
-									// : 'font-medium text-gray-600'
-								}`}
-							></span>
-							<p
-								className={`leading-1 ml-4 flex ${
-									// activeRoute(route.path) === true
-									'font-bold text-navy-700 dark:text-white'
-									// : 'font-medium text-gray-600'
-								}`}
-							>
-								NAV
-							</p>
-						</li>
-						{/* {activeRoute(route.path) ? (
-							<div className="absolute right-0 top-px h-9 w-1 rounded-lg bg-brand-500 dark:bg-brand-400" />
-						) : null} */}
-					</div>
-				</Link>
-				{/* <Links routes={routes} /> */}
-			</ul>
-			{/* Nav item end */}
+			<Links />
 		</div>
 	);
 };
